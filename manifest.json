@@ -13,6 +13,8 @@
 	},
 	"content_scripts": [
 		{
+			"run_at": "document_end",
+			"css": ["styles.css"],
 			"matches": ["<all_urls>"],
 			"js": ["script.js"]
 		}

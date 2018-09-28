@@ -14,7 +14,8 @@ chrome.runtime.onMessage.addListener(handleRequest);
 
 /*Small function wich create a sidebar(just to illustrate my point)*/
 var sidebarOpen = false;
-function toggleSidebar() {
+function toggleSidebar()
+{
 	if(sidebarOpen) {
 		var el = document.getElementById('mySidebar');
 		el.parentNode.removeChild(el);
@@ -29,11 +30,13 @@ function toggleSidebar() {
 			left:0px;\
 			width:4%;\
 			height:100%;\
-			background:blue;\
+			background-color:blue;\
 			box-shadow:inset 0 0 1em black;\
 			z-index:999999;\
 		";
 		document.body.appendChild(sidebar);
 		sidebarOpen = true;
+
+		
 	}
 }
