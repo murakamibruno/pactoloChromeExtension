@@ -8,13 +8,15 @@ function handleRequest(
 	console.log("Barra pronta pra ativar");
 	if (request.callFunction == "toggleSidebar")
 		toggleSidebar();
-	sendResponse("Barra ativada");
+	sendResponse({return: true});
 }
 chrome.runtime.onMessage.addListener(handleRequest);
 
 /*Small function wich create a sidebar(just to illustrate my point)*/
+// var sidebarOpen = false;
+// function toggleSidebar()
+
 var sidebarOpen = false;
-function toggleSidebar()
 {
 	if(sidebarOpen) {
 		var el = document.getElementById('mySidebar');
@@ -36,7 +38,5 @@ function toggleSidebar()
 		";
 		document.body.appendChild(sidebar);
 		sidebarOpen = true;
-
-		
 	}
 }

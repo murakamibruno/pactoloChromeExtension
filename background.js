@@ -21,7 +21,8 @@ console.log( 'Background.html starting!' );
 			chrome.pageAction.show(tabs[i].id);
 		}
 	});
-	
+
+
 	/*Send request to current tab when page action is clicked*/
 	chrome.pageAction.onClicked.addListener(function(tab)
 	{
