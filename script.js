@@ -62,10 +62,8 @@ var sidebarOpen = false;
                     position:fixed;\
                     right: 0;\
                     top: 0;\
-                    // display: none;\
                     width: 96%;\
                     height: 100%;\
-                    box-shadow:inset 0 0 1em black;\
                     z-index:999999;\
                 ";
                 document.body.appendChild(sidebar);

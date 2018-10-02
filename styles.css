@@ -10,6 +10,11 @@ app-drawer{
     margin-left: 4%;
 }
 
-ytd-watch-flexy{
+ytd-app {
     margin-left: 4%;
+}
+
+.ytp-chrome-controls
+{
+    width: 96% ;
 }
