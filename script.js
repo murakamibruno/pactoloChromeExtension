@@ -90,4 +90,6 @@ var sidebarOpen = false;
         }
 	}
 
+	console.log(document.getElementById("mySidebar").offsetWidth);
+
 }

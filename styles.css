@@ -14,7 +14,12 @@ ytd-app {
     margin-left: 4%;
 }
 
+.style-scope ytd-masthead
+{
+    width: 96%;
+}
+
 .ytp-chrome-controls
 {
-    width: 96% ;
+    width: 96%;
 }
