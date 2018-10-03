@@ -16,18 +16,20 @@ chrome.runtime.onMessage.addListener(handleRequest);
 // var sidebarOpen = false;
 // function toggleSidebar()
 
-var sidebarOpen = false;
+function toggleSidebar()
 {
-	if(sidebarOpen) {
-		var el = document.getElementById('mySidebar');
-		el.parentNode.removeChild(el);
-		sidebarOpen = false;
-	}
-	else {
-        var overlay = document.createElement('div');
-        var sidebar = document.createElement('div');
-		sidebar.id = "mySidebar";
-		sidebar.style.cssText = "\
+    // var sidebarOpen = false;
+    // if(sidebarOpen == true) {
+    //     var el = document.getElementById('mySidebar');
+    //     el.parentNode.removeChild(el);
+    //     sidebarOpen = false;
+    // }
+    // else {
+    // }
+    var overlay = document.createElement('div');
+    var sidebar = document.createElement('div');
+    sidebar.id = "mySidebar";
+    sidebar.style.cssText = "\
 			position:fixed;\
 			top:0px;\
 			left:0px;\
@@ -37,14 +39,13 @@ var sidebarOpen = false;
 			box-shadow:inset 0 0 1em black;\
 			z-index:999999;\
 		";
-        sidebar.onmouseenter = toggleOnOff;
-		document.body.appendChild(sidebar);
-		sidebarOpen = true;
+    sidebar.onmouseenter = toggleOnOff;
+    document.body.appendChild(sidebar);
 
-        function toggleOnOff() {
-            if (sidebar.style.backgroundColor == 'blue')
-            {
-                sidebar.style.cssText = "\
+    function toggleOnOff() {
+        if (sidebar.style.backgroundColor == 'blue')
+        {
+            sidebar.style.cssText = "\
 			    position:fixed;\
 			    top:0px;\
 			    left:0px;\
@@ -54,8 +55,8 @@ var sidebarOpen = false;
 			        box-shadow:inset 0 0 1em black;\
 			        z-index:999999;\
 		            ";
-                overlay.id = "myOverlay";
-                overlay.style.cssText = "\
+            overlay.id = "myOverlay";
+            overlay.style.cssText = "\
                     background-color: rgba(0,0,0,0);\
                     bottom: 0;\
                     left: 4%;\
@@ -66,12 +67,11 @@ var sidebarOpen = false;
                     height: 100%;\
                     z-index:999999;\
                 ";
-                document.body.appendChild(sidebar);
-                document.body.appendChild(overlay);
-                sidebarOpen = true;
-            }
-            else{
-                sidebar.style.cssText = "\
+            document.body.appendChild(sidebar);
+            document.body.appendChild(overlay);
+        }
+        else{
+            sidebar.style.cssText = "\
 			    position:fixed;\
 			    top:0px;\
 			    left:0px;\
@@ -81,15 +81,12 @@ var sidebarOpen = false;
 			        box-shadow:inset 0 0 1em black;\
 			        z-index:999999;\
 		            ";
-                document.body.appendChild(sidebar);
-                overlay.style.cssText = "\
+            document.body.appendChild(sidebar);
+            overlay.style.cssText = "\
                 display : none;\
                 ";
-                sidebarOpen = true;
-            }
         }
-	}
-
-	console.log(document.getElementById("mySidebar").offsetWidth);
-
+    }
+    console.log(document.getElementById("mySidebar").offsetWidth);
 }
+
