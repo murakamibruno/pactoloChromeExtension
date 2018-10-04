@@ -13,11 +13,23 @@ app-drawer{
 #movie_player:-webkit-full-screen{
     width: 96% !important;
     object-fit: cover !important;
-    position: relative !important;
+    position: absolute !important;
 }
 
 /*#myvideo:-webkit-full-screen {*/
     /*width: 96%;*/
+/*}*/
+
+/*#gsr{*/
+    /*width: 96%;*/
+/*}*/
+
+.ctr-p{
+    width: 96% !important;
+}
+
+/*.sfbgg{*/
+    /*width: 96% !important;*/
 /*}*/
 
 ytd-app {

@@ -16,6 +16,8 @@ chrome.runtime.onMessage.addListener(handleRequest);
 // var sidebarOpen = false;
 // function toggleSidebar()
 
+var checkMoviePlayer = document.getElementById("movie_player");
+
 function toggleSidebar()
 {
     // var sidebarOpen = false;
@@ -41,6 +43,11 @@ function toggleSidebar()
 		";
     sidebar.onmouseenter = toggleOnOff;
     document.body.appendChild(sidebar);
+    // document.getElementById("movie_player").appendChild(mySidebar);
+    if(checkMoviePlayer){
+        checkMoviePlayer.appendChild(mySidebar);
+    }
+
 
     function toggleOnOff() {
         if (sidebar.style.backgroundColor == 'blue')
@@ -68,7 +75,15 @@ function toggleSidebar()
                     z-index:999999;\
                 ";
             document.body.appendChild(sidebar);
+            // document.getElementById("movie_player").appendChild(mySidebar);
+            if(checkMoviePlayer){
+                checkMoviePlayer.appendChild(mySidebar);
+            }
             document.body.appendChild(overlay);
+            // document.getElementById("movie_player").appendChild(myOverlay);
+            if(checkMoviePlayer){
+                checkMoviePlayer.appendChild(myOverlay);
+            }
         }
         else{
             sidebar.style.cssText = "\
@@ -82,13 +97,26 @@ function toggleSidebar()
 			        z-index:999999;\
 		            ";
             document.body.appendChild(sidebar);
+            // document.getElementById("movie_player").appendChild(mySidebar);
+            if(checkMoviePlayer){
+                checkMoviePlayer.appendChild(mySidebar);
+            }
             overlay.style.cssText = "\
                 display : none;\
                 ";
         }
+        // function checkMoviePlayer()
+        // {
+        //     if (document.getElementById("movie_player") === "movie_player")
+        //     {
+        //         console.log("MOVIE PLAYER FUNçÃO ENTROU!!!")
+        //         document.getElementById("movie_player").appendChild(mySidebar);
+        //         document.getElementById("movie_player").appendChild(myOverlay);
+        //     }
+        // }
     }
     document.body.style.marginLeft = "4%";
-    document.getElementById("movie_player").style.width = "96% !important"
     console.log(document.getElementById("mySidebar").offsetWidth);
+
 }
 
