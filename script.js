@@ -87,6 +87,8 @@ function toggleSidebar()
                 ";
         }
     }
+    document.body.style.marginLeft = "4%";
+    document.getElementById("movie_player").style.width = "96% !important"
     console.log(document.getElementById("mySidebar").offsetWidth);
 }
 
