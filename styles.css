@@ -1,3 +1,4 @@
+/*vv General websites resizing due to the sidebar vv*/
 html{
     margin-left: 4%;
 }
@@ -6,10 +7,73 @@ header{
     margin-left: 4%;
 }
 
+/*vv youtube vv*/
+
 app-drawer{
     margin-left: 4%;
 }
 
-ytd-watch-flexy{
+ytd-app {
     margin-left: 4%;
+}
+
+.style-scope ytd-masthead
+{
+    width: 96%;
+}
+
+.ytp-chrome-controls
+{
+    width: 96%;
+}
+#mySidebar:fullscreen{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:4%;
+    height:100%;
+    background-color:blue;
+    box-shadow:inset 0 0 1em black;
+    z-index:999999;
+}
+
+#mySidebar:-moz-full-screen{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:4%;
+    height:100%;
+    background-color:blue;
+    box-shadow:inset 0 0 1em black;
+    z-index:999999;
+}
+#mySidebar:-webkit-full-screen{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:4%;
+    height:100%;
+    background-color:blue;
+    box-shadow:inset 0 0 1em black;
+    z-index:999999;
+}
+
+/* vv G1 vv */
+
+.row{
+    margin-left: 4% !important;
+}
+
+/* gmail vv */
+
+body.aAU{
+    margin-left: 4% !important;
+}
+
+.aeJ{
+    margin-right: 5% !important;
+}
+
+.aiw .qp{
+    margin-right: 4% !important;
 }

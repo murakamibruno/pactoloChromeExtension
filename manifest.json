@@ -2,7 +2,7 @@
 	"name": "Inject sidebar",
 	"manifest_version": 2,
 	"description": "Inject a sidebar on the current tab when the page action is clicked",
-	"version": "0.2",
+	"version": "0.5",
 	"background": {
 		"page": "background.html",
 		"persistent": false
