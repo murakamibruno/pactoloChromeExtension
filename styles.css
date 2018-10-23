@@ -22,42 +22,9 @@ ytd-app {
     width: 96%;
 }
 
-.ytp-chrome-controls
-{
-    width: 96%;
+.html5-video-player.ytp-fullscreen, .ytp-left-controls, .html5-video-player a, .ytp-play-button:not(.ytp-play-button-playlist)::before{
+    padding-left: 4%;
 }
-#mySidebar:fullscreen{
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:4%;
-    height:100%;
-    background-color:blue;
-    box-shadow:inset 0 0 1em black;
-    z-index:999999;
-}
-
-#mySidebar:-moz-full-screen{
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:4%;
-    height:100%;
-    background-color:blue;
-    box-shadow:inset 0 0 1em black;
-    z-index:999999;
-}
-#mySidebar:-webkit-full-screen{
-    position:fixed;
-    top:0px;
-    left:0px;
-    width:4%;
-    height:100%;
-    background-color:blue;
-    box-shadow:inset 0 0 1em black;
-    z-index:999999;
-}
-
 /* vv G1 vv */
 
 .row{

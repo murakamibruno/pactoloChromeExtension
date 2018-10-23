@@ -42,22 +42,17 @@ function toggleSidebar()
 
         sidebarOpen = true;
         document.body.appendChild(sidebar);
-        sidebar.onmouseenter = toggleOnOff;
-        document.onwebkitfullscreenchange = fullscreenSidebar(sidebar);
-        //let fullscreen = false;
-
-        function fullscreenSidebar(sidebar) {
-            //  if (fullscreen == false){
-            //fullscreen = true;
+        document.body.appendChild(overlay);
+        document.onwebkitfullscreenchange = fsFunction;
+        let telaCheia = false;
+        function fsFunction(){
+            telaCheia = true;
             document.getElementById("movie_player").appendChild(sidebar);
             document.getElementById("movie_player").appendChild(overlay);
-            sidebar.onmouseenter = toggleOnOff;
-            console.log('entrou no full screen')
-            //   } else {
-            //  fullscreen = false;
-            //    }
-
+            return telaCheia;
         }
+
+        sidebar.onmouseenter = toggleOnOff;
 
         function toggleOnOff()
         {
@@ -88,7 +83,11 @@ function toggleSidebar()
 
                 document.body.appendChild(sidebar);
                 document.body.appendChild(overlay);
-                sidebarOpen = true;
+                if (telaCheia === true){
+                    document.getElementById("movie_player").appendChild(sidebar);
+                    document.getElementById("movie_player").appendChild(overlay);
+                }
+
             }
             else{
                 sidebar.style.cssText = "\
@@ -102,6 +101,9 @@ function toggleSidebar()
 			        z-index:999999;\
 		            ";
                 document.body.appendChild(sidebar);
+                if (telaCheia === true) {
+                    document.getElementById("movie_player").appendChild(sidebar);
+                }
                 overlay.style.cssText = "\
                     display : none;\
                 ";
